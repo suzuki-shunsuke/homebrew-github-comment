@@ -6,13 +6,13 @@ class GithubComment < Formula
   desc "CLI to create and hide GitHub comments
 "
   homepage "https://github.com/suzuki-shunsuke/github-comment"
-  version "4.0.1"
+  version "4.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v4.0.1/github-comment_4.0.1_darwin_amd64.tar.gz"
-      sha256 "fb3b75af28078dbeef9c9dde95955fa7877623c8f77d3ebaaba4990764fb6c8e"
+      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v4.1.0/github-comment_4.1.0_darwin_amd64.tar.gz"
+      sha256 "18b55737f7e0d635c238de5058285d4865162a98f24181c0ffe6a407ccb4a5e8"
 
       def install
         bin.install "github-comment"
@@ -22,8 +22,8 @@ class GithubComment < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v4.0.1/github-comment_4.0.1_linux_amd64.tar.gz"
-      sha256 "9568289b4cabb368771b2cd92575b9474ced9865b092f13cecf992cfcf908bae"
+      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v4.1.0/github-comment_4.1.0_linux_amd64.tar.gz"
+      sha256 "aa1df14b64d2e871fd395f63b10ca1c4322fb16dc8decca8fd9e67d360cefc79"
 
       def install
         bin.install "github-comment"
