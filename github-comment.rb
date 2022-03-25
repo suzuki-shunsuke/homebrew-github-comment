@@ -6,24 +6,32 @@ class GithubComment < Formula
   desc "CLI to create and hide GitHub comments
 "
   homepage "https://github.com/suzuki-shunsuke/github-comment"
-  version "4.1.0"
+  version "4.1.1"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v4.1.0/github-comment_4.1.0_darwin_amd64.tar.gz"
-      sha256 "18b55737f7e0d635c238de5058285d4865162a98f24181c0ffe6a407ccb4a5e8"
+    url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v4.1.1/github-comment_4.1.1_darwin_amd64.tar.gz"
+    sha256 "9842d8dabea440c562579de2db42338206df6e6afbe5ae19c8d77760facb793b"
 
-      def install
-        bin.install "github-comment"
+    def install
+      bin.install "github-comment"
+    end
+
+    if Hardware::CPU.arm?
+      def caveats
+        <<~EOS
+          The darwin_arm64 architecture is not supported for the GithubComment
+          formula at this time. The darwin_amd64 binary may work in compatibility
+          mode, but it might not be fully supported.
+        EOS
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v4.1.0/github-comment_4.1.0_linux_amd64.tar.gz"
-      sha256 "aa1df14b64d2e871fd395f63b10ca1c4322fb16dc8decca8fd9e67d360cefc79"
+      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v4.1.1/github-comment_4.1.1_linux_amd64.tar.gz"
+      sha256 "9ad155258ccf388f7791c2665036273f79181bc097e0334a6a5afa6f87ce8a3f"
 
       def install
         bin.install "github-comment"
