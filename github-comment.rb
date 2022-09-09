@@ -6,21 +6,21 @@ class GithubComment < Formula
   desc "CLI to create and hide GitHub comments
 "
   homepage "https://github.com/suzuki-shunsuke/github-comment"
-  version "4.5.0"
+  version "4.5.1"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v4.5.0/github-comment_4.5.0_darwin_amd64.tar.gz"
-      sha256 "ae726793ab179e1f4efd3755e9015274f8085e4257740b3ec209c863a46478ca"
+    if Hardware::CPU.arm?
+      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v4.5.1/github-comment_4.5.1_darwin_arm64.tar.gz"
+      sha256 "5cea19158a95c7219b7f0ea9b61d3fc5e9f9d8a408110c72ac65aac0f37d1cf6"
 
       def install
         bin.install "github-comment"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v4.5.0/github-comment_4.5.0_darwin_arm64.tar.gz"
-      sha256 "592de4d85222e1aa300a66457e7a34702849d85cc6b3e4c37381f37dfce72579"
+    if Hardware::CPU.intel?
+      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v4.5.1/github-comment_4.5.1_darwin_amd64.tar.gz"
+      sha256 "39e2e145d0c05971e820ac1a45ace7f692bac30ce9e59b8435139205058bd0bc"
 
       def install
         bin.install "github-comment"
@@ -29,17 +29,17 @@ class GithubComment < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v4.5.0/github-comment_4.5.0_linux_arm64.tar.gz"
-      sha256 "ddccb9f7f904bb53e3e55bf72eefe200746d90cf18b6b7a73308fc9b2a8179a1"
+    if Hardware::CPU.intel?
+      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v4.5.1/github-comment_4.5.1_linux_amd64.tar.gz"
+      sha256 "bab20297b5656aca5f00803394f086eb8896b9a0ee62593b101cdd1e49a77c95"
 
       def install
         bin.install "github-comment"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v4.5.0/github-comment_4.5.0_linux_amd64.tar.gz"
-      sha256 "246d0a2fc75a0f74644c7f00a6b3316c5a5c0055146c65fe738625cbdff1206d"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v4.5.1/github-comment_4.5.1_linux_arm64.tar.gz"
+      sha256 "5c39a5de7e3bb0560d43f9d9c8249d2d493da9face899d243262fc9d9545b325"
 
       def install
         bin.install "github-comment"
