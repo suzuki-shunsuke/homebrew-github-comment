@@ -12,7 +12,7 @@ class GithubComment < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v5.0.0/github-comment_5.0.0_darwin_amd64.tar.gz"
-      sha256 "7ce808befe702faaac6bbe47c2bf42b508915c5d5e1370ae874625a4b638c08b"
+      sha256 "3b0834f1504f8e3c3b797507aca010d2bd9be394cded30e63e99d061ddf519c2"
 
       def install
         bin.install "github-comment"
@@ -20,7 +20,7 @@ class GithubComment < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v5.0.0/github-comment_5.0.0_darwin_arm64.tar.gz"
-      sha256 "ee7c08e1c222b6faef5906dfcb45510496a87356ba01baa5a7fbaf6196f30392"
+      sha256 "4b146a8685938cc93ead98876eed3ba6fe236ca3739992447f685b59d82f4e34"
 
       def install
         bin.install "github-comment"
@@ -29,17 +29,17 @@ class GithubComment < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v5.0.0/github-comment_5.0.0_linux_amd64.tar.gz"
-      sha256 "4cfc1727242d96cd378b1d3c12ca10de658f775456ad6c3bf3249271f47ac344"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v5.0.0/github-comment_5.0.0_linux_arm64.tar.gz"
+      sha256 "651641f36d4b8bf94f786681e1de61cbb65ea21b2666c8fa6b975d1cd000d40e"
 
       def install
         bin.install "github-comment"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v5.0.0/github-comment_5.0.0_linux_arm64.tar.gz"
-      sha256 "ca97946b893f6d43ebf9eb97c309a719ee4dbccece5ef46c1f87dcfcaf5aafa0"
+    if Hardware::CPU.intel?
+      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v5.0.0/github-comment_5.0.0_linux_amd64.tar.gz"
+      sha256 "1da8cb9d52395018ec15f876347e204fe632c833baa1831ca36302dec1e0f97a"
 
       def install
         bin.install "github-comment"
