@@ -6,21 +6,21 @@ class GithubComment < Formula
   desc "CLI to create and hide GitHub comments
 "
   homepage "https://github.com/suzuki-shunsuke/github-comment"
-  version "6.2.1"
+  version "6.3.0"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v6.2.1/github-comment_6.2.1_darwin_amd64.tar.gz"
-      sha256 "01519b3b80566044825a2d05813c97bd6bc34bab0eab4d42117008428cd7d689"
+      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v6.3.0/github-comment_6.3.0_darwin_amd64.tar.gz"
+      sha256 "1d05a6a0afed660c1e8a9399ecd7fd8fd3affee9d95d2e410e350cc1a3dc71ae"
 
       def install
         bin.install "github-comment"
       end
     end
     on_arm do
-      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v6.2.1/github-comment_6.2.1_darwin_arm64.tar.gz"
-      sha256 "2cbad3938bc861a0a0069766226d05865c9365ad3e920bded1c1016c67b21051"
+      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v6.3.0/github-comment_6.3.0_darwin_arm64.tar.gz"
+      sha256 "0744e5f79f86f88fee06c9c1fb2f2304fc5e726a8e615d5039cc96271c50caab"
 
       def install
         bin.install "github-comment"
@@ -31,8 +31,8 @@ class GithubComment < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v6.2.1/github-comment_6.2.1_linux_amd64.tar.gz"
-        sha256 "d461b5bb314dfae586fe7a0e06220c58272d2d84dfcee924a1f6ff4da474fe51"
+        url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v6.3.0/github-comment_6.3.0_linux_amd64.tar.gz"
+        sha256 "626077a9c412759d4ecaeff083ee931248cd7a69ee7fce178021574025746626"
 
         def install
           bin.install "github-comment"
@@ -41,8 +41,8 @@ class GithubComment < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v6.2.1/github-comment_6.2.1_linux_arm64.tar.gz"
-        sha256 "e2cd03a0fb6f6bb996cad55a0e0889a85b08685ed5e702477510ff5624fb561b"
+        url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v6.3.0/github-comment_6.3.0_linux_arm64.tar.gz"
+        sha256 "1fcc7bb8c66ec128310ad757e398d8b93601dc0625cf7b1753b9ffce089be765"
 
         def install
           bin.install "github-comment"
