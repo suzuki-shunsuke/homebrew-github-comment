@@ -3,7 +3,7 @@ cask "github-comment" do
   desc "CLI to create and hide GitHub comments
 "
   homepage "https://github.com/suzuki-shunsuke/github-comment"
-  version "6.3.3"
+  version "6.3.4"
 
   livecheck do
     skip "Auto-generated on release."
@@ -13,23 +13,29 @@ cask "github-comment" do
 
   on_macos do
     on_intel do
-      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v6.3.3/github-comment_6.3.3_darwin_amd64.tar.gz"
-      sha256 "7fce0fa45e18aa13f90dd4ba2d148e9684c0b55e3706f00e22327d161ca73e9e"
+      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v6.3.4/github-comment_6.3.4_darwin_amd64.tar.gz"
+      sha256 "d2a1cc6fe22f427aff7c0fa9397fd3eb3cababfffdc1b2d42818358a47116376"
     end
     on_arm do
-      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v6.3.3/github-comment_6.3.3_darwin_arm64.tar.gz"
-      sha256 "c46a68b874f71be892162f733b66cf4cb1c3288fc14e52fe9579a7588ffb73dd"
+      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v6.3.4/github-comment_6.3.4_darwin_arm64.tar.gz"
+      sha256 "c9945b69d4770c5726e18e7ad0fa0564dcd68b99e5d9bf134d61fd9579c6a659"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v6.3.3/github-comment_6.3.3_linux_amd64.tar.gz"
-      sha256 "2a5e4b3dac2dd659b23fc9a3beca7f5cceff98b8c4c0e2bd82bd6c60dbf84e03"
+      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v6.3.4/github-comment_6.3.4_linux_amd64.tar.gz"
+      sha256 "c8024d8033b063e93b31773335f783dfad2496d997bc9e8744706a07777d24da"
     end
     on_arm do
-      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v6.3.3/github-comment_6.3.3_linux_arm64.tar.gz"
-      sha256 "954954f558b90b51b6202833196416d388a43de5fa41be9246bade0ca0ebc7dc"
+      url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v6.3.4/github-comment_6.3.4_linux_arm64.tar.gz"
+      sha256 "ec2a6b1318a3d777c237cadc095c3a0289c23340b1fa765ffdf0387c3e355a0d"
+    end
+  end
+
+  postflight do
+    if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/github-comment"]
     end
   end
 
