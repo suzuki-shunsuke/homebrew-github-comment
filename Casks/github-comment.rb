@@ -4,7 +4,7 @@ cask "github-comment" do
   desc "CLI to create and hide GitHub comments
 "
   homepage "https://github.com/suzuki-shunsuke/github-comment"
-  version "6.4.0"
+  version "6.4.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -15,22 +15,22 @@ cask "github-comment" do
   on_macos do
     on_intel do
       url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v#{version}/github-comment_#{version}_darwin_amd64.tar.gz"
-      sha256 "5b37bb20946636ea938a5a6be145beb2fe2232867edaa5752b105c34b31d0461"
+      sha256 "82e5d3f3b9f902ef649ecdca0974619db0102e4a92b67c3aebbe7a923e67e4c4"
     end
     on_arm do
       url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v#{version}/github-comment_#{version}_darwin_arm64.tar.gz"
-      sha256 "7af5ed1bf9c78892da02d3383cef1404025de099871b4bdacef9b73baf360752"
+      sha256 "ba269bae0a55b672d13eb23655392acf868011c1b5346db91ad9bad8f16cde8f"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v#{version}/github-comment_#{version}_linux_amd64.tar.gz"
-      sha256 "df2cc573653a632f3245a24f20fc7a15a8096b7b42c599c489c7e2cd3e3c48c8"
+      sha256 "20983822f9b690ba5bb9d1ef69e784b6607b7ce4f2da1a60416ee9e81355b501"
     end
     on_arm do
       url "https://github.com/suzuki-shunsuke/github-comment/releases/download/v#{version}/github-comment_#{version}_linux_arm64.tar.gz"
-      sha256 "a666da1c16ffb7ac54f6a9a0d92118950a847aa216c0a1b08bf6ba503206c01c"
+      sha256 "0871af6a7ddff8de9cece5da021ef67d6e766ac98e8a11b3cb1a9a81986ad2fe"
     end
   end
 
